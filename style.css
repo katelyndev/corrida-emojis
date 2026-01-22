@@ -1,0 +1,75 @@
+body {
+    background-color: rgb(12, 65, 12);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* pista */
+.pista {
+    position: relative;
+    width: 60%;
+    height: 185px;
+    margin: 100px auto;
+    border: 10px solid #1b6628;
+    background-color: #27c468;
+}
+#iniciarCorrida {
+    padding: 18px 60px;
+    font-size: 24px;
+    background: linear-gradient(45deg, #000000, #19a55f);
+    color: white;
+    border: none;
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+
+
+    transform: translateY(-30px) scale(1.05);
+
+    border-radius: 12px;
+}
+
+
+ #titulo {
+    margin: 70px !important;
+    font-size: 45px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+ }
+
+#resultado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 32px;
+    margin-top: 20px;
+}
+
+/* jogadores */
+.jogador {
+    position: absolute;
+    left: 10;
+    font-size: 48px;
+}
+
+/* posições verticais */
+#jogador1 {
+    top: 30px;
+}
+
+#jogador2 {
+    top: 90px;
+}
+
+/* linha de chegada */
+.chegada {
+    position: absolute;
+    right: 50px;
+    top: 55px;
+    font-size: 48px;
+}
+
+

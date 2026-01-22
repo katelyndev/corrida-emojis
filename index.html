@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Corrida Emojis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TÍTULO CORRIGIDO -->
+    <h1 id="titulo">🏁 Corrida Emojis 🏁</h1>
+
+    <div class="pista">
+        <div id="jogador1" class="jogador">🐎</div>
+        <div id="jogador2" class="jogador">🐅</div>
+        <div class="chegada">🏁</div>
+    </div>
+
+    <!-- BOTÃO DE INICIAR -->
+   <button id="iniciarCorrida" onclick="iniciarCorrida()">Iniciar</button>
+
+
+
+
+    <p id="resultado"></p>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function iniciarCorrida() {
+            const jogador1 = document.getElementById("jogador1");
+            const jogador2 = document.getElementById("jogador2");
+            const resultado = document.getElementById("resultado");
+
+            // reset
+            jogador1.style.left = "0px";
+            jogador2.style.left = "0px";
+            resultado.textContent = "";
+
+            const larguraPista = document.querySelector(".pista").offsetWidth - 80;
+
+            // sorteio da posição final
+            const pontos1 = Math.random();
+            const pontos2 = Math.random();
+
+            
+            jogador1.style.left = `${pontos1 * larguraPista}px`;
+            jogador2.style.left = `${pontos2 * larguraPista}px`;
+
+            // resultado
+            if (pontos1 > pontos2) {
+                resultado.textContent = "🐎 Jogador 1 venceu!";
+            } else if (pontos2 > pontos1) {
+                resultado.textContent = "🐅 Jogador 2 venceu!";
+            } else {
+                resultado.textContent = "🤝 Empate!";
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
